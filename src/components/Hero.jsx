@@ -2,7 +2,8 @@ import profileImg from '../assets/profile.png'
 
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center text-center px-6 py-20 gap-6 overflow-hidden">
+    <section className="relative flex flex-col items-center text-center px-6 py-12 gap-4 overflow-hidden">
+
       {/* Blobs de fundo — decorativos, não interativos */}
       <div className="absolute top-[-60px] left-[10%] w-72 h-72 rounded-full bg-[var(--accent)] opacity-20 blur-3xl animate-[blob_18s_ease-in-out_infinite]"></div>
       <div className="absolute top-[20%] right-[5%] w-80 h-80 rounded-full bg-[var(--accent)] opacity-15 blur-3xl animate-[blob_22s_ease-in-out_infinite] [animation-delay:-6s]"></div>
@@ -13,7 +14,7 @@ function Hero() {
         <img
           src={profileImg}
           alt="Manoel Justino"
-          className="w-44 h-44 rounded-full object-cover border-2 border-[var(--accent-border)]"
+          className="w-28 h-28 sm:w-40 sm:h-40 rounded-full object-cover border-2 border-[var(--accent-border)]"
         />
 
         <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[var(--accent-bg)] border border-[var(--accent-border)] text-xs font-medium text-[var(--text-h)]">
