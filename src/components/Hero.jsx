@@ -8,6 +8,10 @@ function Hero() {
       <div className="absolute top-[20%] right-[5%] w-80 h-80 rounded-full bg-(--accent) opacity-15 blur-3xl animate-[blob_22s_ease-in-out_infinite] [animation-delay:-6s]"></div>
       <div className="absolute -bottom-20 left-[30%] w-64 h-64 rounded-full bg-(--accent) opacity-20 blur-3xl animate-[blob_20s_ease-in-out_infinite] [animation-delay:-11s]"></div>
 
+      {/* Fade de transição — esmaece o brilho dos blobs até a cor de fundo padrão,
+        evitando o corte abrupto entre o Hero e a seção seguinte */}
+      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-b from-transparent to-(--bg) z-[5]"></div>
+
       {/* Conteúdo real, acima dos blobs */}
       <div className="relative z-10 flex flex-col items-center gap-6">
         <img
