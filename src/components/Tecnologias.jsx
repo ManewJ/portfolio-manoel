@@ -21,7 +21,7 @@ function Tecnologias() {
           e mantém consistência visual entre as seções. mt-10 isola do parágrafo */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-10">
 
-        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5">
+        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5 shadow-(--shadow)">
           <h3 className="text-sm font-semibold text-(--text-h) uppercase tracking-wide mb-3">
             Front-end
           </h3>
@@ -33,7 +33,7 @@ function Tecnologias() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5">
+        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5 shadow-(--shadow)">
           <h3 className="text-sm font-semibold text-(--text-h) uppercase tracking-wide mb-3">
             Mobile
           </h3>
@@ -43,7 +43,7 @@ function Tecnologias() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5">
+        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5 shadow-(--shadow)">
           <h3 className="text-sm font-semibold text-(--text-h) uppercase tracking-wide mb-3">
             Backend &amp; Dados
           </h3>
@@ -53,7 +53,7 @@ function Tecnologias() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5">
+        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5 shadow-(--shadow)">
           <h3 className="text-sm font-semibold text-(--text-h) uppercase tracking-wide mb-3">
             Testes
           </h3>
@@ -62,7 +62,7 @@ function Tecnologias() {
           </div>
         </div>
 
-        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5">
+        <div className="rounded-2xl border border-(--border) bg-(--code-bg) p-5 shadow-(--shadow)">
           <h3 className="text-sm font-semibold text-(--text-h) uppercase tracking-wide mb-3">
             Ferramentas
           </h3>
