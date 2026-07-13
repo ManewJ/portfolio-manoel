@@ -13,7 +13,7 @@ O site vai crescendo seção por seção, cada uma na sua própria branch:
 - ✅ **Hero** — foto, badge de disponibilidade, stats rápidos e um fundo animado com blobs de gradiente
 - ✅ **Sobre** — minha trajetória, do treino ao código
 - ✅ **Tecnologias** — minha stack organizada por área de atuação
-- 🔄 **Processo** *(em andamento)* — uma timeline animada mostrando como eu conduzo o trabalho
+- ✅ **Processo** — timeline animada (alternando lados no desktop) mostrando como eu conduzo o trabalho, revelada via Intersection Observer
 - 🔜 **Próximas paradas** — Projetos, Experiência, Formação, Contato, navbar com menu mobile, efeitos de scroll, e o deploy final
 ---
  
@@ -77,4 +77,3 @@ Sigo boas práticas de mercado desde o início do projeto:
 Feito por **Manoel Justino** — Personal Trainer e desenvolvedor front-end em transição de carreira.
  
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Manoel%20Justino-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/manoel-justino-dev/)
- 
