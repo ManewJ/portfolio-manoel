@@ -1,4 +1,4 @@
-import profileImg from '../assets/profile.png'
+import profileImg from '../assets/profile.webp'
 
 function Hero() {
   return (
@@ -17,6 +17,8 @@ function Hero() {
         <img
           src={profileImg}
           alt="Manoel Justino"
+          width={480}
+          height={350}
           className="w-28 h-28 sm:w-40 sm:h-40 rounded-full object-cover border-2 border-(--accent-border)"
         />
 
