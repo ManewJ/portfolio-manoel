@@ -36,13 +36,11 @@ function Projetos() {
       links: [],
     },
     {
-      titulo: 'Testes E2E — Portal da Transparência',
-      status: 'Implementado',
-      descricao: 'Projeto de testes automatizados end-to-end (BDD + Page Object Model) contra o Portal da Transparência.',
-      stack: ['Cypress', 'Gherkin'],
-      links: [
-        { label: 'GitHub', url: 'https://github.com/ManewJ/va02-qa-cypress-bdd-entrega' },
-      ],
+      titulo: 'Vita Inspirata',
+      status: 'Em andamento',
+      descricao: 'Site católico de evangelização voltado a jovens, com textos em Markdown e fontes sempre indicadas. Projeto pessoal, do conteúdo ao código.',
+      stack: ['Astro', 'TypeScript', 'Tailwind', 'Markdown'],
+      links: [],
     },
   ]
 
@@ -58,7 +56,7 @@ function Projetos() {
       </h2>
 
       <p className="text-base text-(--text) leading-relaxed">
-        Do mobile aos testes automatizados — cada projeto resolve um problema real, com honestidade sobre o que já está pronto e o que ainda está em construção.
+        Do mobile à web — cada projeto resolve um problema real, com honestidade sobre o que já está pronto e o que ainda está em construção.
       </p>
 
       <div className="grid grid-cols-1 gap-6 mt-10">
