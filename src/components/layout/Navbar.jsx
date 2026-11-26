@@ -1,11 +1,48 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { links } from '../../data/navegacao'
+import { useSecaoAtiva } from '../../hooks/useSecaoAtiva'
+
+// Fica fora do componente para ser criado uma vez só. Dentro, seria um array
+// novo a cada render, e o useEffect do useSecaoAtiva rodaria toda hora.
+const ids = links.map((link) => link.id)
+
+// Linha roxa fina na base da navbar que enche conforme a página rola.
+// Atualiza o estilo direto pelo ref, sem useState: a rolagem dispara muitos
+// eventos por segundo, e assim a navbar não precisa renderizar de novo a cada um.
+function BarraDeProgresso() {
+  const barra = useRef(null)
+
+  useEffect(() => {
+    const atualizar = () => {
+      const total = document.documentElement.scrollHeight - window.innerHeight
+      const progresso = total > 0 ? window.scrollY / total : 0
+      barra.current.style.transform = `scaleX(${progresso})`
+    }
+
+    atualizar()
+    window.addEventListener('scroll', atualizar, { passive: true })
+    window.addEventListener('resize', atualizar)
+    return () => {
+      window.removeEventListener('scroll', atualizar)
+      window.removeEventListener('resize', atualizar)
+    }
+  }, [])
+
+  return (
+    <div
+      ref={barra}
+      aria-hidden="true"
+      className="absolute -bottom-px left-0 h-0.5 w-full origin-left scale-x-0 bg-(--accent)"
+    />
+  )
+}
 
 // Barra de navegação fixa no topo (sticky): acompanha a rolagem da página.
 // Os links são âncoras (#id) que levam até cada seção.
 // No celular, os links ficam num menu que abre pelo botão hambúrguer.
 export function Navbar() {
   const [aberto, setAberto] = useState(false)
+  const ativa = useSecaoAtiva(ids)
 
   // Com o menu aberto, a tecla Esc fecha. O "ouvinte" só existe enquanto
   // o menu está aberto, e a função de limpeza remove quando ele fecha.
@@ -25,6 +62,16 @@ export function Navbar() {
   // Os 3 risquinhos do hambúrguer. Ao abrir, o de cima e o de baixo giram
   // e se cruzam formando um X, e o do meio some.
   const risco = 'absolute h-0.5 w-5 rounded-full bg-current transition duration-300 ease-out motion-reduce:transition-none'
+
+  // Links do desktop: um sublinhado roxo (o ::after) que cresce do centro
+  // no hover e fica aceso na seção ativa.
+  const linkDesktop = (id) =>
+    `relative py-1 text-sm transition-colors duration-200 hover:text-(--accent)
+     after:absolute after:left-0 after:-bottom-0.5 after:h-0.5 after:w-full after:rounded-full
+     after:bg-(--accent) after:origin-center after:transition-transform after:duration-300
+     motion-reduce:after:transition-none hover:after:scale-x-100 ${
+       ativa === id ? 'text-(--accent) after:scale-x-100' : 'text-(--text) after:scale-x-0'
+     }`
 
   return (
     <header className="sticky top-0 z-50 border-b border-(--border) bg-(--bg)/80 backdrop-blur">
@@ -46,7 +93,8 @@ export function Navbar() {
             <li key={link.id}>
               <a
                 href={`#${link.id}`}
-                className="text-sm text-(--text) transition-colors duration-200 hover:text-(--accent)"
+                aria-current={ativa === link.id ? 'location' : undefined}
+                className={linkDesktop(link.id)}
               >
                 {link.label}
               </a>
@@ -68,6 +116,8 @@ export function Navbar() {
         </button>
       </nav>
 
+      <BarraDeProgresso />
+
       {/* Painel do celular. absolute: ele fica POR CIMA da página, em vez de
           empurrar o conteúdo para baixo. Assim, ao tocar num link, a página não
           "pula" quando o menu fecha, e a seção para no lugar certo.
@@ -88,7 +138,10 @@ export function Navbar() {
                 <a
                   href={`#${link.id}`}
                   onClick={fecharMenu}
-                  className="block py-3 text-base text-(--text) border-b border-(--border) transition-colors duration-200 hover:text-(--accent)"
+                  aria-current={ativa === link.id ? 'location' : undefined}
+                  className={`block py-3 text-base border-b border-(--border) transition-colors duration-200 hover:text-(--accent) ${
+                    ativa === link.id ? 'text-(--accent)' : 'text-(--text)'
+                  }`}
                 >
                   {link.label}
                 </a>
