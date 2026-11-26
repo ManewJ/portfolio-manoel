@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { passos } from '../../data/processo'
 
 function Processo() {
   const [revelados, setRevelados] = useState([false, false, false, false])
@@ -27,21 +28,6 @@ function Processo() {
 
   const passosRevelados = revelados.slice(0, 3).filter(Boolean).length
   const alturaLinha = (passosRevelados / 3) * 100
-
-  const passos = [
-    {
-      titulo: 'Entendimento e planejamento',
-      texto: 'Antes de escrever qualquer código, entendo o problema por completo e planejo a menor unidade de trabalho possível — uma branch, uma tarefa clara, um objetivo definido.',
-    },
-    {
-      titulo: 'Execução com validação contínua',
-      texto: 'Construo de forma iterativa, testando cada mudança imediatamente — em diferentes tamanhos de tela, sempre documentando o progresso e as decisões técnicas pelo caminho.',
-    },
-    {
-      titulo: 'Refinamento com base em resultado real',
-      texto: 'Reviso, ajusto e refino com base no que efetivamente funciona na prática — a mesma disciplina que usei por 9 anos ajustando planos de treino conforme a resposta real de cada atleta.',
-    },
-  ]
 
   return (
     <section id="processo" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">

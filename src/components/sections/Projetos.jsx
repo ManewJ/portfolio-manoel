@@ -1,3 +1,5 @@
+import { projetos } from '../../data/projetos'
+
 function IconeGithub() {
   return (
     <svg viewBox="0 0 24 24" fill="currentColor" className="w-3.5 h-3.5">
@@ -17,33 +19,6 @@ function IconeLinkExterno() {
 }
 
 function Projetos() {
-  const projetos = [
-    {
-      titulo: 'CrismaApp',
-      status: 'Implementado',
-      descricao: 'App mobile para gestão de grupos de Crisma, desenvolvido em equipe de 4 pessoas.',
-      stack: ['React Native', 'Expo', 'Firebase'],
-      links: [
-        { label: 'GitHub', url: 'https://github.com/ManewJ/crisma-app-entrega' },
-        { label: 'APK', url: 'https://expo.dev/accounts/manoeljustino86/projects/crisma-app/builds/e4fb31d3-317e-4949-b9ea-7c86af29ca93' },
-      ],
-    },
-    {
-      titulo: 'TrackRun',
-      status: 'Em andamento',
-      descricao: 'App de registro de treinos de corrida, nascido de um problema real: relatos de treino se perdendo no WhatsApp. Atualmente em desenvolvimento o painel do treinador — visualização dos treinos dos atletas e envio de feedbacks.',
-      stack: ['React', 'Vite', 'Tailwind', 'Supabase'],
-      links: [],
-    },
-    {
-      titulo: 'Vita Inspirata',
-      status: 'Em andamento',
-      descricao: 'Site católico de evangelização voltado a jovens, com textos em Markdown e fontes sempre indicadas. Projeto pessoal, do conteúdo ao código.',
-      stack: ['Astro', 'TypeScript', 'Tailwind', 'Markdown'],
-      links: [],
-    },
-  ]
-
   return (
     <section id="projetos" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
 
@@ -60,9 +35,9 @@ function Projetos() {
       </p>
 
       <div className="grid grid-cols-1 gap-6 mt-10">
-        {projetos.map((projeto, index) => (
+        {projetos.map((projeto) => (
           <div
-            key={index}
+            key={projeto.titulo}
             className="rounded-2xl border border-(--border) bg-(--code-bg) p-6 shadow-(--shadow)"
           >
             <div className="flex items-center justify-between flex-wrap gap-2 mb-3">
@@ -85,9 +60,9 @@ function Projetos() {
             </p>
 
             <div className="flex flex-wrap gap-2 mb-4">
-              {projeto.stack.map((tech, i) => (
+              {projeto.stack.map((tech) => (
                 <span
-                  key={i}
+                  key={tech}
                   className="px-3 py-1 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)"
                 >
                   {tech}
@@ -100,9 +75,9 @@ function Projetos() {
                 diferencia visualmente das tags, que só acendem no hover */}
             {projeto.links.length > 0 && (
               <div className="flex flex-wrap gap-2">
-                {projeto.links.map((link, i) => (
+                {projeto.links.map((link) => (
                   <a
-                    key={i}
+                    key={link.url}
                     href={link.url}
                     target="_blank"
                     rel="noopener noreferrer"
