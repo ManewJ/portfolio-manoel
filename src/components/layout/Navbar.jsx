@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { links } from '../../data/navegacao'
 import { useSecaoAtiva } from '../../hooks/useSecaoAtiva'
+import { LogoAtomo } from '../ui/LogoAtomo'
 
 // Fica fora do componente para ser criado uma vez só. Dentro, seria um array
 // novo a cada render, e o useEffect do useSecaoAtiva rodaria toda hora.
@@ -83,9 +84,9 @@ export function Navbar() {
           href="#inicio"
           aria-label="Manoel Justino, voltar ao início"
           onClick={fecharMenu}
-          className="text-lg font-extrabold tracking-tighter text-(--accent)"
+          className="-ml-3 text-(--accent)"
         >
-          MJ
+          <LogoAtomo className="w-24 h-14" />
         </a>
 
         <ul className="hidden sm:flex items-center gap-6">
