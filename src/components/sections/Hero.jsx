@@ -30,12 +30,13 @@ function Hero() {
 
         <div className="-mt-3">
           <h1>Manoel Justino</h1>
-          <h2>Desenvolvedor Frontend Jr.</h2>
+          <h2>Desenvolvedor Full Stack Jr.</h2>
+          <p className="text-sm text-(--text)">com foco em Frontend</p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mt-2">
           <Tag>Localizado em João Pessoa - PB 🏖</Tag>
-          <Tag>React • React Native • JavaScript</Tag>
+          <Tag>React • Node.js • React Native</Tag>
           <Tag>9 anos como Personal Trainer</Tag>
         </div>
       </div>
