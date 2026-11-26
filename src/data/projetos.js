@@ -20,6 +20,15 @@ export const projetos = [
     links: [],
   },
   {
+    titulo: 'Portfólio pessoal',
+    status: 'Implementado',
+    descricao: 'Este site, construído em etapas: uma branch e um PR por etapa, componentes reutilizáveis, dados separados do layout, hooks próprios com Intersection Observer, navbar acessível e deploy contínuo na Vercel.',
+    stack: ['React', 'Vite', 'Tailwind CSS', 'Vercel'],
+    links: [
+      { label: 'GitHub', url: 'https://github.com/ManewJ/portfolio-manoel' },
+    ],
+  },
+  {
     titulo: 'Vita Inspirata',
     status: 'Em andamento',
     descricao: 'Site católico de evangelização voltado a jovens, com textos em Markdown e fontes sempre indicadas. Projeto pessoal, do conteúdo ao código.',
