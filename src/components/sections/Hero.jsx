@@ -1,4 +1,4 @@
-import profileImg from '../assets/profile.webp'
+import profileImg from '../../assets/profile.webp'
 
 function Hero() {
   return (

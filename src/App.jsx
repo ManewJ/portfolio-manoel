@@ -1,8 +1,8 @@
-import Hero from './components/Hero'
-import Sobre from './components/Sobre'
-import Tecnologias from './components/Tecnologias'
-import Processo from './components/Processo'
-import Projetos from './components/Projetos'
+import Hero from './components/sections/Hero'
+import Sobre from './components/sections/Sobre'
+import Tecnologias from './components/sections/Tecnologias'
+import Processo from './components/sections/Processo'
+import Projetos from './components/sections/Projetos'
 
 function App() {
   return (
