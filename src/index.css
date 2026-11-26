@@ -49,6 +49,23 @@ body {
   margin: 0;
 }
 
+/* Rolagem suave ao clicar nos links da navbar.
+   Quem pede menos movimento no sistema (prefers-reduced-motion) pula direto. */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Ao pular para uma seção, deixa espaço para a navbar fixa não cobrir o título */
+section[id] {
+  scroll-margin-top: 4rem;
+}
+
 @layer base {
   h1,
   h2 {
