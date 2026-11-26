@@ -1,63 +1,21 @@
-import { useEffect, useRef, useState } from 'react'
+import { useReveal } from '../../hooks/useReveal'
+import { passos } from '../../data/processo'
+import { SectionHeader } from '../ui/SectionHeader'
 
 function Processo() {
-  const [revelados, setRevelados] = useState([false, false, false, false])
-  const refs = useRef([])
+  // +1 porque a frase final também é revelada ao rolar
+  const { revelados, registrar } = useReveal(passos.length + 1)
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const index = Number(entry.target.dataset.index)
-            setRevelados((prev) => {
-              const novo = [...prev]
-              novo[index] = true
-              return novo
-            })
-          }
-        })
-      },
-      { threshold: 0.4 }
-    )
-
-    refs.current.forEach((el) => el && observer.observe(el))
-    return () => observer.disconnect()
-  }, [])
-
-  const passosRevelados = revelados.slice(0, 3).filter(Boolean).length
-  const alturaLinha = (passosRevelados / 3) * 100
-
-  const passos = [
-    {
-      titulo: 'Entendimento e planejamento',
-      texto: 'Antes de escrever qualquer código, entendo o problema por completo e planejo a menor unidade de trabalho possível — uma branch, uma tarefa clara, um objetivo definido.',
-    },
-    {
-      titulo: 'Execução com validação contínua',
-      texto: 'Construo de forma iterativa, testando cada mudança imediatamente — em diferentes tamanhos de tela, sempre documentando o progresso e as decisões técnicas pelo caminho.',
-    },
-    {
-      titulo: 'Refinamento com base em resultado real',
-      texto: 'Reviso, ajusto e refino com base no que efetivamente funciona na prática — a mesma disciplina que usei por 9 anos ajustando planos de treino conforme a resposta real de cada atleta.',
-    },
-  ]
+  // A linha da timeline cresce conforme os passos (não a frase final) aparecem
+  const passosRevelados = revelados.slice(0, passos.length).filter(Boolean).length
+  const alturaLinha = (passosRevelados / passos.length) * 100
 
   return (
     <section id="processo" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
 
-      <span className="text-xs font-medium text-(--accent) uppercase tracking-wider mb-3 block">
-        Processo
-      </span>
-
-      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-(--text-h) mb-6">
-        Como eu conduzo o trabalho do planejamento à entrega.
-      </h2>
-
-      <p className="text-base text-(--text) leading-relaxed">
-        Processo estruturado, com validação constante em cada etapa — da primeira linha de
-        código ao ajuste final.
-      </p>
+      <SectionHeader rotulo="Processo" titulo="Como eu conduzo o trabalho do planejamento à entrega.">
+        Processo estruturado, com validação constante em cada etapa — da primeira linha de código ao ajuste final.
+      </SectionHeader>
 
       <div className="relative mt-12 pl-8 sm:pl-0">
 
@@ -81,8 +39,7 @@ function Processo() {
             // realmente decide de que lado da linha ele aparece
             const conteudo = (
               <div
-                ref={(el) => (refs.current[index] = el)}
-                data-index={index}
+                ref={registrar(index)}
                 className={`sm:w-1/2 transition-all duration-1000 ease-out ${
                   ladoDireito ? 'sm:pl-10 sm:text-left' : 'sm:pr-10 sm:text-right'
                 } ${
@@ -127,10 +84,9 @@ function Processo() {
       </div>
 
       <div
-        ref={(el) => (refs.current[3] = el)}
-        data-index={3}
+        ref={registrar(passos.length)}
         className={`mt-16 text-center transition-all duration-1000 ease-out ${
-          revelados[3] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+          revelados[passos.length] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
         <p className="text-xl sm:text-2xl font-semibold text-(--text-h) tracking-tight">
