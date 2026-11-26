@@ -1,4 +1,5 @@
 import profileImg from '../../assets/profile.webp'
+import { Tag } from '../ui/Tag'
 
 function Hero() {
   return (
@@ -33,15 +34,9 @@ function Hero() {
         </div>
 
         <div className="flex flex-wrap justify-center gap-3 mt-2">
-          <span className="px-3 py-1 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border)">
-            Localizado em João Pessoa - PB 🏖
-          </span>
-          <span className="px-3 py-1 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border)">
-            React • React Native • JavaScript
-          </span>
-          <span className="px-3 py-1 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border)">
-            9 anos como Personal Trainer
-          </span>
+          <Tag>Localizado em João Pessoa - PB 🏖</Tag>
+          <Tag>React • React Native • JavaScript</Tag>
+          <Tag>9 anos como Personal Trainer</Tag>
         </div>
       </div>
     </section>

@@ -1,21 +1,15 @@
 import { projetos } from '../../data/projetos'
 import { IconeGithub, IconeLinkExterno } from '../ui/icons'
+import { SectionHeader } from '../ui/SectionHeader'
+import { Tag } from '../ui/Tag'
 
 function Projetos() {
   return (
     <section id="projetos" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
 
-      <span className="text-xs font-medium text-(--accent) uppercase tracking-wider mb-3 block">
-        Projetos
-      </span>
-
-      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-(--text-h) mb-6">
-        Projetos que aplicam a teoria na prática.
-      </h2>
-
-      <p className="text-base text-(--text) leading-relaxed">
+      <SectionHeader rotulo="Projetos" titulo="Projetos que aplicam a teoria na prática.">
         Do mobile à web — cada projeto resolve um problema real, com honestidade sobre o que já está pronto e o que ainda está em construção.
-      </p>
+      </SectionHeader>
 
       <div className="grid grid-cols-1 gap-6 mt-10">
         {projetos.map((projeto) => (
@@ -44,12 +38,7 @@ function Projetos() {
 
             <div className="flex flex-wrap gap-2 mb-4">
               {projeto.stack.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)"
-                >
-                  {tech}
-                </span>
+                <Tag key={tech}>{tech}</Tag>
               ))}
             </div>
 

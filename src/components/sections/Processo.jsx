@@ -1,5 +1,6 @@
 import { useReveal } from '../../hooks/useReveal'
 import { passos } from '../../data/processo'
+import { SectionHeader } from '../ui/SectionHeader'
 
 function Processo() {
   // +1 porque a frase final também é revelada ao rolar
@@ -12,18 +13,9 @@ function Processo() {
   return (
     <section id="processo" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
 
-      <span className="text-xs font-medium text-(--accent) uppercase tracking-wider mb-3 block">
-        Processo
-      </span>
-
-      <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight text-(--text-h) mb-6">
-        Como eu conduzo o trabalho do planejamento à entrega.
-      </h2>
-
-      <p className="text-base text-(--text) leading-relaxed">
-        Processo estruturado, com validação constante em cada etapa — da primeira linha de
-        código ao ajuste final.
-      </p>
+      <SectionHeader rotulo="Processo" titulo="Como eu conduzo o trabalho do planejamento à entrega.">
+        Processo estruturado, com validação constante em cada etapa — da primeira linha de código ao ajuste final.
+      </SectionHeader>
 
       <div className="relative mt-12 pl-8 sm:pl-0">
 
