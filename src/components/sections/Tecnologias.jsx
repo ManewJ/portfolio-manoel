@@ -9,7 +9,7 @@ function Tecnologias() {
     <section id="tecnologias" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
 
       <SectionHeader rotulo="Tecnologias" titulo="Stack organizada por área de atuação.">
-        Tecnologias aplicadas em projetos reais — do front-end ao mobile, com testes automatizados e ferramentas de versionamento no fluxo do dia a dia.
+        Tecnologias aplicadas em projetos reais — do front-end ao back-end e ao mobile, com testes automatizados e ferramentas de versionamento no fluxo do dia a dia.
       </SectionHeader>
 
       {/* grid de 2 colunas — mesmo padrão do Sobre, economiza espaço vertical

@@ -2,7 +2,7 @@
 
 🔗 **Veja no ar: [manoel-justino.vercel.app](https://manoel-justino.vercel.app)**
 
-Esse é o meu portfólio pessoal — fique à vontade pra explorar! Ele foi feito com **React + Vite + Tailwind CSS** e construído aos poucos, etapa por etapa, enquanto eu aprendo e aplico frontend na prática.
+Esse é o meu portfólio pessoal — fique à vontade pra explorar! Ele foi feito com **React + Vite + Tailwind CSS** e construído aos poucos, etapa por etapa, enquanto eu aprendo e aplico desenvolvimento web na prática.
 
 Depois de 9 anos como Personal Trainer, tô migrando de carreira pra desenvolvimento — e decidi não esconder isso no caminho. Esse portfólio é tanto minha vitrine profissional quanto meu campo de treino técnico (trocadilho intencional 😄).
 
@@ -96,7 +96,7 @@ Sigo boas práticas de mercado desde o início do projeto:
 
 ## 👋 Sobre mim
 
-Feito por **Manoel Justino** — desenvolvedor Frontend Jr., formado em Sistemas para Internet (UNIESP) e Personal Trainer em transição de carreira.
+Feito por **Manoel Justino** — desenvolvedor Full Stack Jr. com foco em Frontend, formado em Sistemas para Internet (UNIESP) e Personal Trainer em transição de carreira.
 
 [![Portfólio](https://img.shields.io/badge/Portf%C3%B3lio-manoel--justino.vercel.app-7C3AED?style=flat)](https://manoel-justino.vercel.app)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Manoel%20Justino-0077B5?style=flat&logo=linkedin)](https://www.linkedin.com/in/manoel-justino-dev/)

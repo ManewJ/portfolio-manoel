@@ -29,7 +29,7 @@ function Contato() {
   return (
     <section id="contato" className="max-w-2xl mx-auto px-6 pt-4 pb-16 sm:pt-8 sm:pb-24 text-left">
       <SectionHeader rotulo="Contato" titulo="Vamos conversar?">
-        Estou em busca da minha primeira oportunidade como desenvolvedor Frontend. Se quiser
+        Estou em busca da minha primeira oportunidade como desenvolvedor Full Stack. Se quiser
         falar sobre uma vaga, um projeto ou trocar uma ideia, é só chamar.
       </SectionHeader>
 
@@ -53,7 +53,7 @@ function Contato() {
       <div className="flex flex-wrap gap-3 mt-8">
         <a
           href={contato.curriculo}
-          download="Curriculo-Manoel-Justino-Frontend.pdf"
+          download="Curriculo-Manoel-Justino.pdf"
           className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-(--accent) text-sm font-medium text-(--bg) transition-opacity duration-200 hover:opacity-90"
         >
           <IconeDownload className="w-4 h-4" />

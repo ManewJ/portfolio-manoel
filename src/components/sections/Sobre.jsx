@@ -8,10 +8,10 @@ function Sobre() {
     >
       <SectionHeader
         rotulo="Sobre"
-        titulo="Frontend orientado a clareza, performance e experiência do usuário."
+        titulo="Desenvolvimento orientado a clareza, performance e experiência do usuário."
       >
         Formado em Sistemas para Internet (UNIESP), com 9 anos de experiência como Personal
-        Trainer. Hoje direciono minha carreira para o desenvolvimento Frontend, unindo
+        Trainer. Hoje direciono minha carreira para o desenvolvimento Full Stack, com foco em Frontend, unindo
         disciplina técnica com uma visão de produto que poucos devs junior têm: a de quem
         já foi o "usuário final" de soluções de saúde e performance.
       </SectionHeader>
