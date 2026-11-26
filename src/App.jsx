@@ -1,3 +1,4 @@
+import { Navbar } from './components/layout/Navbar'
 import Hero from './components/sections/Hero'
 import Sobre from './components/sections/Sobre'
 import Tecnologias from './components/sections/Tecnologias'
@@ -7,11 +8,14 @@ import Projetos from './components/sections/Projetos'
 function App() {
   return (
     <>
-      <Hero />
-      <Sobre />
-      <Tecnologias />
-      <Processo />
-      <Projetos />
+      <Navbar />
+      <main>
+        <Hero />
+        <Sobre />
+        <Tecnologias />
+        <Processo />
+        <Projetos />
+      </main>
     </>
   )
 }

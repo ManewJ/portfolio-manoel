@@ -3,7 +3,7 @@ import { Tag } from '../ui/Tag'
 
 function Hero() {
   return (
-    <section className="relative flex flex-col items-center text-center px-6 py-12 sm:py-20 gap-4 sm:gap-6 overflow-hidden">
+    <section id="inicio" className="relative flex flex-col items-center text-center px-6 py-12 sm:py-20 gap-4 sm:gap-6 overflow-hidden">
       {/* Blobs de fundo — decorativos, não interativos */}
       <div className="absolute -top-15 left-[10%] w-72 h-72 rounded-full bg-(--accent) opacity-20 blur-3xl animate-[blob_18s_ease-in-out_infinite]"></div>
       <div className="absolute top-[20%] right-[5%] w-80 h-80 rounded-full bg-(--accent) opacity-15 blur-3xl animate-[blob_22s_ease-in-out_infinite] [animation-delay:-6s]"></div>
