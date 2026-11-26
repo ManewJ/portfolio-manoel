@@ -28,7 +28,10 @@ function Tecnologias() {
           <div className="flex flex-wrap gap-2">
             <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">React</span>
             <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">JavaScript</span>
+            <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">TypeScript</span>
+            <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">Astro</span>
             <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">Tailwind CSS</span>
+            <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">Motion</span>
             <span className="px-3 py-1.5 rounded-md border border-(--border) text-sm transition-colors duration-200 hover:border-(--accent-border) hover:bg-(--accent-bg)">Vite</span>
           </div>
         </div>
