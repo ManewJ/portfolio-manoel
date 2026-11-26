@@ -4,4 +4,5 @@ export const links = [
   { id: 'tecnologias', label: 'Tecnologias' },
   { id: 'processo', label: 'Processo' },
   { id: 'projetos', label: 'Projetos' },
+  { id: 'contato', label: 'Contato' },
 ]
