@@ -24,8 +24,8 @@ function Projetos() {
               <span
                 className={`text-xs font-medium px-2.5 py-1 rounded-full ${
                   projeto.status === 'Implementado'
-                    ? 'bg-green-500/10 text-green-400 border border-green-500/30'
-                    : 'bg-amber-500/10 text-amber-400 border border-amber-500/30'
+                    ? 'bg-green-500/10 text-green-800 dark:text-green-400 border border-green-500/30'
+                    : 'bg-amber-500/10 text-amber-800 dark:text-amber-400 border border-amber-500/30'
                 }`}
               >
                 {projeto.status}
