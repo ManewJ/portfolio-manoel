@@ -22,7 +22,7 @@ function Processo() {
         <div className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-2 bottom-2 w-0.5 bg-(--border)"></div>
 
         <div
-          className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-2 w-0.5 bg-(--accent) transition-all duration-700 ease-out"
+          className="absolute left-0 sm:left-1/2 sm:-translate-x-1/2 top-2 w-0.5 bg-(--accent) transition-all duration-700 ease-out motion-reduce:transition-none"
           style={{ height: `${alturaLinha}%` }}
         ></div>
 
@@ -40,7 +40,7 @@ function Processo() {
             const conteudo = (
               <div
                 ref={registrar(index)}
-                className={`sm:w-1/2 transition-all duration-1000 ease-out ${
+                className={`sm:w-1/2 transition-all duration-1000 ease-out motion-reduce:transition-none ${
                   ladoDireito ? 'sm:pl-10 sm:text-left' : 'sm:pr-10 sm:text-right'
                 } ${
                   revelados[index]
@@ -85,7 +85,7 @@ function Processo() {
 
       <div
         ref={registrar(passos.length)}
-        className={`mt-16 text-center transition-all duration-1000 ease-out ${
+        className={`mt-16 text-center transition-all duration-1000 ease-out motion-reduce:transition-none ${
           revelados[passos.length] ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}
       >
